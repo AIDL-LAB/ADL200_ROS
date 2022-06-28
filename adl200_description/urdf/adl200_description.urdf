@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="adl200_description">
+  <link name="base_footprint"/>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-1.73105762239778E-06 2.6645087998255E-06 0.159996924441697"
+        rpy="0 0 0" />
+      <mass
+        value="21.834505852523" />
+      <inertia
+        ixx="0.106497717682646"
+        ixy="5.71705519912713E-06"
+        ixz="-1.10089621138951E-07"
+        iyy="0.232219887353151"
+        iyz="5.36288902434558E-07"
+        izz="0.191241633229091" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l_c_wheel">
+    <inertial>
+      <origin
+        xyz="-0.000535586446956005 -0.287346068275047 -0.0011381787298258"
+        rpy="0 0 0" />
+      <mass
+        value="36.3194582839521" />
+      <inertia
+        ixx="1.88203727778314"
+        ixy="0.0462230103604198"
+        ixz="-0.000348346986331269"
+        iyy="1.93829505406097"
+        iyz="-0.00036009975984621"
+        izz="3.58983823595777" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/l_c_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/l_c_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_footprint_fixed"
+    type="fixed">
+    <origin
+      xyz="0 0 0.035"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="base_link" />
+  </joint>
+  <joint
+    name="l_c_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.287000000000008 0.160000000000003"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_c_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r_c_wheel">
+    <inertial>
+      <origin
+        xyz="-0.000535586446965511 0.286653931724963 -0.00113817872982513"
+        rpy="0 0 0" />
+      <mass
+        value="36.3194582839521" />
+      <inertia
+        ixx="1.88203727778314"
+        ixy="0.0462230103604199"
+        ixz="-0.000348346986331513"
+        iyy="1.93829505406097"
+        iyz="-0.000360099759845944"
+        izz="3.58983823595777" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/r_c_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/r_c_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_c_wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.287000000000002 0.160000000000003"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_c_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="f_l">
+    <inertial>
+      <origin
+        xyz="-0.00399339122103681 1.7426132098864E-07 0.00340398596098868"
+        rpy="0 0 0" />
+      <mass
+        value="0.0542719134282797" />
+      <inertia
+        ixx="7.61711991455403E-05"
+        ixy="-1.73202293646988E-10"
+        ixz="-4.32087698011787E-07"
+        iyy="5.66798180736113E-05"
+        iyz="-9.82923338437075E-11"
+        izz="3.9708974246813E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/f_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/f_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f_l"
+    type="continuous">
+    <origin
+      xyz="0.43917 0 0.202849999999996"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="f_l" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="r_l">
+    <inertial>
+      <origin
+        xyz="-0.00599334263797058 2.41513646772468E-08 0.00340400787697359"
+        rpy="0 0 0" />
+      <mass
+        value="0.0542720029871697" />
+      <inertia
+        ixx="7.61712481494335E-05"
+        ixy="-1.47499652761418E-11"
+        ixz="-4.32108252749279E-07"
+        iyy="5.66798536527865E-05"
+        iyz="3.65833383092367E-12"
+        izz="3.97090281405654E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/r_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://adl200_description/meshes/r_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_l"
+    type="continuous">
+    <origin
+      xyz="-0.441170000000004 0 0.202849999999996"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_l" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>
